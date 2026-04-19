@@ -5,8 +5,8 @@ const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
-  
-  const handleSubmit = (e: React.FormEvent) => { 
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setTimeout(() => {
@@ -16,16 +16,16 @@ const Contact: React.FC = () => {
       setTimeout(() => setSent(false), 4000)
     }, 1000)
   }
-  
+
   return (
     <section id="contact" className="py-28 px-6 relative overflow-hidden">
       {/* Soft background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-rose-50/20 to-pink-50/30"></div>
-      
+
       {/* Decorative elements */}
       <div className="absolute top-40 right-0 w-80 h-80 bg-pink-100/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-0 w-96 h-96 bg-rose-100/20 rounded-full blur-3xl"></div>
-      
+
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header - Elegant & Minimal */}
         <div className="text-center mb-12">
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
             For bookings, custom orders, or collaborations — I'd love to hear from you
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-10">
           {/* Left Column - Contact Info */}
           <div className="space-y-8">
@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                   <p className="text-gray-700 font-medium">+91 98765 43210</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 text-gray-600">
                 <div className="w-9 h-9 rounded-full bg-white/60 flex items-center justify-center shadow-sm">
                   <span className="text-rose-400 text-sm">✉️</span>
@@ -93,14 +93,23 @@ const Contact: React.FC = () => {
                   <p className="text-gray-700 font-medium">apurva.nailart@example.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 text-gray-600">
                 <div className="w-9 h-9 rounded-full bg-white/60 flex items-center justify-center shadow-sm">
                   <span className="text-rose-400 text-sm">📷</span>
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 uppercase tracking-wide">Instagram</p>
-                  <p className="text-rose-500 font-medium">@apurva.nailart</p>
+                  <p className="text-rose-500 font-medium">
+                    <a
+                      href="https://www.instagram.com/glamorous_nails_by_apurva?igsh=eXJjOHB0aGM3dmdl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-rose-600 transition-colors"
+                    >
+                      @glamorous_nails_by_apurva
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -118,45 +127,44 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">Your Name</label>
-                <input 
-                  type="text" 
-                  placeholder="e.g., Apurva Thorat" 
-                  value={form.name} 
-                  onChange={e => setForm({...form, name: e.target.value})} 
-                  className="w-full p-3 rounded-xl border border-rose-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition text-gray-700 placeholder:text-gray-300" 
-                  required 
+                <input
+                  type="text"
+                  placeholder="e.g., Apurva Thorat"
+                  value={form.name}
+                  onChange={e => setForm({ ...form, name: e.target.value })}
+                  className="w-full p-3 rounded-xl border border-rose-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition text-gray-700 placeholder:text-gray-300"
+                  required
                 />
               </div>
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">Email Address</label>
-                <input 
-                  type="email" 
-                  placeholder="hello@example.com" 
-                  value={form.email} 
-                  onChange={e => setForm({...form, email: e.target.value})} 
-                  className="w-full p-3 rounded-xl border border-rose-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition text-gray-700 placeholder:text-gray-300" 
-                  required 
+                <input
+                  type="email"
+                  placeholder="hello@example.com"
+                  value={form.email}
+                  onChange={e => setForm({ ...form, email: e.target.value })}
+                  className="w-full p-3 rounded-xl border border-rose-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition text-gray-700 placeholder:text-gray-300"
+                  required
                 />
               </div>
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">Your Nail Vision</label>
-                <textarea 
-                  rows={4} 
-                  placeholder="Tell me about your dream nails, preferred style, or any special occasion..." 
-                  value={form.message} 
-                  onChange={e => setForm({...form, message: e.target.value})} 
+                <textarea
+                  rows={4}
+                  placeholder="Tell me about your dream nails, preferred style, or any special occasion..."
+                  value={form.message}
+                  onChange={e => setForm({ ...form, message: e.target.value })}
                   className="w-full p-3 rounded-xl border border-rose-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition text-gray-700 placeholder:text-gray-300 resize-none"
                   required
                 ></textarea>
               </div>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={loading}
-                className={`w-full py-3 rounded-full font-medium text-sm tracking-wide transition-all duration-300 ${
-                  loading 
-                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
+                className={`w-full py-3 rounded-full font-medium text-sm tracking-wide transition-all duration-300 ${loading
+                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                     : 'bg-gradient-to-r from-rose-400 to-pink-400 text-white hover:shadow-lg hover:scale-[1.02]'
-                }`}
+                  }`}
               >
                 {loading ? 'Sending... 💌' : 'Send Message →'}
               </button>
