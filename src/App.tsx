@@ -13,9 +13,10 @@ function App() {
     
     // Add smooth scroll behavior to all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      // ✅ FIX: Use arrow function instead of regular function
+      anchor.addEventListener('click', (e) => {
         e.preventDefault()
-        const href = this.getAttribute('href')
+        const href = anchor.getAttribute('href')  // ✅ Use 'anchor' directly instead of 'this'
         if (href && href !== '#') {
           const element = document.querySelector(href)
           if (element) {
