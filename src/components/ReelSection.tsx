@@ -13,7 +13,7 @@ interface Reel {
 const reels: Reel[] = [
   {
     id: 1,
-    src: '/src/assets/videos/apu1.mp4',
+    src: '/apu1.mp4',
     title: 'Kokan Theme 🌸',
     description: 'Intricate hand-sculpted flowers with gel',
     duration: '0:45',
