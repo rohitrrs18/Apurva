@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 const nailImages = [
-  { src: '/public/apu1.jpg', alt: 'Floral Nail Art', cat: 'Floral', price: '₹4,500+', description: 'Delicate hand-painted florals perfect for spring and summer occasions.' },
+  { src: "/apu1.jpg", alt: 'Floral Nail Art', cat: 'Floral', price: '₹4,500+', description: 'Delicate hand-painted florals perfect for spring and summer occasions.' },
   { src: '/public/apu2.jpg', alt: 'Chrome Glam', cat: 'Chrome', price: '₹5,500+', description: 'Mirror-like chrome finish that catches every ray of light.' },
   { src: '/src/assets/images/nails/pastel-dream.jpg', alt: 'Pastel Dream', cat: 'Pastel', price: '₹4,000+', description: 'Soft pastel gradients for an ethereal, dreamy look.' },
   { src: '/src/assets/images/nails/french-twist.jpg', alt: 'French Twist', cat: 'French', price: '₹5,000+', description: 'Modern take on the classic French manicure.' },
