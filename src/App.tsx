@@ -1,5 +1,4 @@
 // src/App.tsx (Updated to use Home page)
-import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ThreeBackground from './components/ThreeBackground'
