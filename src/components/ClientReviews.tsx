@@ -8,7 +8,7 @@ const reviews = [
 ]
 
 const ClientReviews: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [_activeIndex, _setActiveIndex] = useState(0)  // Underscore tells TS it's intentionally unused
 
   return (
     <section id="reviews" className="py-20 px-6">
