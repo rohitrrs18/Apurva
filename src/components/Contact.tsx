@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
                 <label className="block text-gray-600 text-sm font-medium mb-2">Your Name</label>
                 <input 
                   type="text" 
-                  placeholder="e.g., Priya Sharma" 
+                  placeholder="e.g., Apurva Thorat" 
                   value={form.name} 
                   onChange={e => setForm({...form, name: e.target.value})} 
                   className="w-full p-3 rounded-xl border border-rose-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition text-gray-700 placeholder:text-gray-300" 
